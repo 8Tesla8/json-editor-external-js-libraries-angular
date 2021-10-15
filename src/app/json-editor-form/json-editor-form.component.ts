@@ -12,9 +12,6 @@ import { JsonEditorModel, JsonError } from '../models/json-editor.model';
 // https://www.npmjs.com/package/@json-editor/json-editor
 // https://github.com/json-editor/json-editor
 
-// instruction how add js library to angular project
-// https://medium.com/@clintpitzak/how-to-use-external-javascript-libraries-in-angular-8-247baacbdccf
-
 declare var JSONEditor: any;
 
 @Component({
