@@ -46,12 +46,6 @@ export class JsonEditorFormComponent implements AfterViewInit, OnDestroy {
             use_default_values: true,
             schema: this.jsonSchema,
             startval: this.json,
-            theme: 'bootstrap4', // html
-
-            prompt_before_delete: false, //- If true, displays a dialog box with a confirmation message before node deletion.
-            disable_edit_json: false, // - If set to true, the Edit JSON button will be hidden (works for objects)
-            disable_properties: false, // - If set to true, the Edit Properties button will be hidden (works for objects)
-            remove_empty_properties: true, //- If set to true for an object, empty object properties (i.e. those with falsy values) will not be returned by getValue().
         });
 
     }
@@ -69,10 +63,6 @@ export class JsonEditorFormComponent implements AfterViewInit, OnDestroy {
 
     private validate(): JsonError[]|null {
         const errors = this.jsonEditor.validate();
-        // errors is an array of objects, each with a `path`, `property`, and `message` parameter
-        // `property` is the schema keyword that triggered the validation error (e.g. "minLength")
-        // `path` is a dot separated path into the JSON object (e.g. "root.path.to.field")
-
 
         if (errors.length) {
             let jsonErrors: JsonError[] = [];
